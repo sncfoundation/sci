@@ -38,7 +38,7 @@ only once it ships in a reference implementation.
 | Spec | Mirrors | Defines | Status |
 |------|---------|---------|--------|
 | [**SCRI**](specs/scri-v0.1.md) — Sheet Container Runtime Interface | CRI / runtime-spec | The apiserver ↔ node-agent contract: the store, reads, heartbeat, desired-state reconciliation, pod lifecycle, control verbs, auth. | **v0.1 (experimental)** |
-| **SICF** — Sheet-Native Image Container Format | OCI image-spec | What a sheet-native image is: layers as tabs, a manifest row, base64 blobs, content digests. | drafting ([#47](https://github.com/sncfoundation/sheeternetes/issues/47)) |
+| [**SICF**](specs/sicf-v0.1.md) — Sheet-Native Image Container Format | OCI image-spec | Two interchangeable modes: reference an ordinary OCI registry, or store the image natively in a workbook (layers as tabs, base64 blobs, content digests), with a lossless OCI ⇆ SICF bridge. | **v0.1 (experimental)** |
 | **SDS** — Sheet Distribution Spec | OCI distribution-spec | How images move between sheets and registries: the pull/push protocol, registry-in-cells. | planned |
 
 ## Reference implementations
