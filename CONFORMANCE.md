@@ -33,6 +33,15 @@ your apiserver to self-certify.
 | F6 | §9 | HMAC-signed POSTs are accepted; unsigned, tampered, or stale ones are rejected. |
 | F7 | §3 | The Events tab is present and populated. |
 
+## SICF
+
+| # | Clause | Check |
+|---|--------|-------|
+| S1 | SICF §2 | An OCI-mode `image` reference (e.g. `nginx:alpine`) is resolved and run. |
+| S2 | SICF §3 | A `sicf:` reference is resolved from an Images/Layers store and run (native mode). |
+| S3 | SICF §3 | A layer whose base64 exceeds the cell limit is reassembled from ordered chunks and its digest verified; a mismatch aborts the pull. |
+| S4 | SICF §4 | `sheetbuild import` then `export` round-trips an image with identical layer digests. |
+
 ## Self-certifying
 
 ```bash
